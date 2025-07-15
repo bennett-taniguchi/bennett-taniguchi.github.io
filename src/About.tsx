@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import BlurText from "./blocks/BlurText/BlurText";
-import Iridescence from "./blocks/Iridescence/Iridescence";
+ 
 import RotatingText from "./blocks/RotatingText/RotatingText";
 import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar";
 import { Button } from "./components/ui/button";
-import { Card } from "./components/ui/card";
-import CurvedLoop from "./blocks/CurvedLoop/CurvedLoop";
+ 
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);

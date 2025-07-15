@@ -9,10 +9,10 @@ import React, {
 import {
   motion,
   AnimatePresence,
-  Transition,
+ 
   type VariantLabels,
   type Target,
-  type AnimationControls,
+ 
   type TargetAndTransition,
 } from "framer-motion";
 
@@ -33,9 +33,9 @@ export interface RotatingTextProps
     "children" | "transition" | "initial" | "animate" | "exit"
   > {
   texts: string[];
-  transition?: Transition;
+  transition?: any;
   initial?: boolean | Target | VariantLabels;
-  animate?: boolean | VariantLabels | AnimationControls | TargetAndTransition;
+  animate?: boolean | VariantLabels | any | TargetAndTransition;
   exit?: Target | VariantLabels;
   animatePresenceMode?: "sync" | "wait";
   animatePresenceInitial?: boolean;

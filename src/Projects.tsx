@@ -1,8 +1,6 @@
-import Navbar from "./components/landing/Navbar";
+ 
 import ProjectCard from "./components/landing/ProjectCard";
-import Marquee from "./components/ui/marquee";
-import Nav from "./components/ui/nav";
-import { ScrollArea } from "./components/ui/scroll-area";
+ 
 
 function App() {
  const projects =[
