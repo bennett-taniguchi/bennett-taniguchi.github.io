@@ -7,9 +7,19 @@ import { defineConfig } from "vite"
 export default defineConfig({
   
   plugins: [react(), tailwindcss() ],
+  esbuild:{loader:'jsx'},
+   
   resolve: {
     alias: {
+       './runtimeConfig':"./runtimeConfig.browser",
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps:{
+    esbuildOptions:{
+      loader:{
+        ".js":"jsx",
+      }
+    }
+  }
 })
