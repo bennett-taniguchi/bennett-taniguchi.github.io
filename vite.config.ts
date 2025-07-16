@@ -8,7 +8,7 @@ export default defineConfig({
   
   plugins: [react(), tailwindcss() ],
   esbuild:{loader:'jsx'},
-   base: '/bennett-taniguchi.github.io/',
+   base: '/',
   resolve: {
     alias: {
        './runtimeConfig':"./runtimeConfig.browser",
