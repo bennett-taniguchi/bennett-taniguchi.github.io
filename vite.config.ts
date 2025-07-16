@@ -2,23 +2,26 @@ import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react-swc"
 import { defineConfig } from "vite"
- 
-// https://vite.dev/config/
+
 export default defineConfig({
-  
-  plugins: [react(), tailwindcss() ],
-  esbuild:{loader:'jsx'},
-   base: '/',
+  base: '/',
+  plugins: [react(), tailwindcss()],
+  // Remove or modify the esbuild config - it's conflicting with TypeScript
+  esbuild: {
+    loader: 'tsx', // Change from 'jsx' to 'tsx' for TypeScript support
+  },
   resolve: {
     alias: {
-       './runtimeConfig':"./runtimeConfig.browser",
+      './runtimeConfig': "./runtimeConfig.browser",
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  optimizeDeps:{
-    esbuildOptions:{
-      loader:{
-        ".js":"jsx",
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        ".js": "jsx",
+        ".ts": "tsx", // Add TypeScript support
+        ".tsx": "tsx", // Add TSX support
       }
     }
   }
